@@ -35,7 +35,7 @@ if(EXISTS "/usr/include/ladybug")
 		${catkin_LIBRARIES}
 		${OpenCV_LIBS}
 		flycapture
-		ladybug
+		"/usr/lib/ladybug/libladybug.so"
 	)
 else()
 	message("'SDK for Ladybug' is not installed. 'ladybug_camera' will not be built.")
