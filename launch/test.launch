@@ -1,21 +1,31 @@
 <launch>
 
     <!-- main launch node -->
-    <node pkg="pointgrey_ladybug" type="ladybug_camera" name="ladybug_camera" output="screen">
+    <node pkg="pointgrey_ladybug" type="ladybug_camera" name="ladybug_camera" output="screen" respawn="true">
     <!--<node pkg="pointgrey_ladybug" type="ladybug_camera" name="ladybug_camera" output="screen" launch-prefix="gdb -ex run &#45;&#45;args">-->
 
 
         <!-- camera properties -->
-        <param name="framerate"               type="double" value="12"/>
+        <param name="framerate"               type="double" value="4"/>
         <param name="use_auto_framerate"      type="bool"   value="false"/>
         <param name="shutter_time"            type="double" value="0.8"/>
-        <param name="use_auto_shutter_time"   type="bool"   value="false"/>
+        <param name="use_auto_shutter_time"   type="bool"   value="true"/>
         <param name="gain_amount"             type="double" value="20"/>
-        <param name="use_auto_gain"           type="bool"   value="false"/>
+        <param name="use_auto_gain"           type="bool"   value="true"/>
 
         <!-- post-processing -->
         <param name="jpeg_percent"            type="int"    value="80"/>
-        <param name="scale"                   type="double" value="30"/>
+        <param name="scale"                   type="double" value="100"/>
+
+        <!-- camera calibration file -->
+        <param name="calib_file_0"            type="string" value="$(find pointgrey_ladybug)/config/ladybug_calib_0.yaml"/>
+        <param name="calib_file_1"            type="string" value="$(find pointgrey_ladybug)/config/ladybug_calib_1.yaml"/>
+        <param name="calib_file_2"            type="string" value="$(find pointgrey_ladybug)/config/ladybug_calib_2.yaml"/>
+        <param name="calib_file_3"            type="string" value="$(find pointgrey_ladybug)/config/ladybug_calib_3.yaml"/>
+        <param name="calib_file_4"            type="string" value="$(find pointgrey_ladybug)/config/ladybug_calib_4.yaml"/>
+        <param name="calib_file_5"            type="string" value="$(find pointgrey_ladybug)/config/ladybug_calib_5.yaml"/>
+
+        <param name="merge_jpeg_channels"     type="bool"   value="true"/>
 
 
     </node>

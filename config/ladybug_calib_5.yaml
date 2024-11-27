@@ -1,0 +1,33 @@
+%YAML:1.0
+image_width:  2048
+image_height: 2448
+camera_name: ladybug
+camera_matrix:
+  rows: 3
+  cols: 3
+  dt: d
+  data: [1262.387025, 0, 1024.0,
+        0.0, 1262.387025, 1232.0,
+        0.0, 0.0, 1.0]
+distortion_model: equidistant
+distortion_coefficients:
+  rows: 1
+  cols: 4
+  dt: d
+  data: [-0.2422665, 0.042270, -0.002106, -0.001473]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  dt: d
+  data: [1., 0., 0.,
+         0., 1., 0.,
+         0., 0., 1.]
+projection_matrix:
+  rows: 3
+  cols: 4
+  dt: d
+  data: [1234.1342857537318, -2.7125538698868663, 991.8010254578304, 0.0,
+        0.0, 1223.7407751102871, 1199.5282211467586, 0.0,
+        0.0, 0.0, 1.0, 0.0]
+
+
